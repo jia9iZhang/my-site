@@ -34,8 +34,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t your-dockerhub-username/your-frontend-image:0.0.1 .
+          docker build -t  ${{ secrets.DOCKER_HUB_USERNAME }}/my-site:0.0.1 .
 
       - name: Push Docker image
         run: |
-          docker push your-dockerhub-username/your-frontend-image:0.0.1
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/my-site:0.0.1
