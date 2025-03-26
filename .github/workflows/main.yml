@@ -27,7 +27,7 @@ jobs:
           npm run build  # 构建项目
 
       - name: Log in to Docker Hub
-        uses: docker/login-action@v4
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}  # Docker Hub 用户名
           password: ${{ secrets.DOCKER_HUB_TOKEN }}  # Docker Hub 密码
